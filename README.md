@@ -44,12 +44,20 @@ Copy `.env.example` to `.env` and update with your Keycloak and OIDC settings:
 cp .env.example .env
 ```
 
-| Variable                | Description                        |
-|-------------------------|------------------------------------|
-| `OIDC_CLIENT_ID`        | Keycloak client ID                 |
-| `OIDC_ISSUER`           | Keycloak issuer URL                |
-| `OIDC_REDIRECT_URI`     | Redirect URI after login           |
-| `OIDC_LOGOUT_REDIRECT`  | Redirect URI after logout          |
+Update the following variables in your `.env` file:
+
+```properties
+# KEYCLOAK PROVIDER CONFIG
+NUXT_OIDC_PROVIDERS_KEYCLOAK_CLIENT_SECRET=your-keycloak-client-secret
+NUXT_OIDC_PROVIDERS_KEYCLOAK_CLIENT_ID=your-keycloak-client-id
+NUXT_OIDC_PROVIDERS_KEYCLOAK_BASE_URL=https://your-keycloak-domain/realms/your-realm
+```
+
+| Variable                                         | Description                    |
+|--------------------------------------------------|--------------------------------|
+| `NUXT_OIDC_PROVIDERS_KEYCLOAK_CLIENT_SECRET`      | Keycloak client secret         |
+| `NUXT_OIDC_PROVIDERS_KEYCLOAK_CLIENT_ID`          | Keycloak client ID             |
+| `NUXT_OIDC_PROVIDERS_KEYCLOAK_BASE_URL`           | Keycloak realm base URL        |
 
 ### 4. Run Development Server
 
